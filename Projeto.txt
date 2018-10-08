@@ -1,0 +1,45 @@
+Name: Geiger's Ticking
+Genre: Adventure, Escape, Horror.
+Type: Single-Player
+
+Setting: Escape the creepy nuclear powerplant.
+
+Story: You´re an office worker of a nuclear powerplant. They're testing a new tecnology on the main reactor. You don't know much about that new tecnology.
+A problem happens during the test, possibly a meltdown...
+You've managed to hide in a saferoom for hours, maybe days... No one has come looking for you. You're alone.
+
+Objective: Escape the powerplant, avoid radiation and other threats. The whole place is in a lockdown and under quarantine. (Some people are not in their right minds after the incident... They may attack you!)
+
+- Search for keys / keycards and multiple tools
+- Don't let crazy people near you. They will kill you.
+  - They wander arround the powerplant (like zombies).
+  - When they find a prey they run to their target and attack savagely.
+-Avoid radiation zones. Radiation levels are very high and will kill you pretty fast.
+  - It burns your skin, your vision gets blury, you can hear the Geiger Counter's sound.
+  - You can can last a little more on radiation zones with Hazmat Suits. (There's an inventory system)
+
+Radiation Mechanic:
+
+- Radiation in RAD/s
+  - 0 to 100 = -0.1HP per second
+  - 100 to 200 = -0.3HP per second
+  - 200 to 300 = -0.7HP per second
+  - 300 to 400 = -1.0HP per second
+  - 400 to 500 = -1.5HP per second
+  - 500 to 600 = -2.0HP per second
+  - 600 to 700 = -3.0HP per second
+  - 700 to 800 = -5.0HP per second
+  - 800 to 900 = -8.0HP per second
+  - 900 to 1000 = -15.0HP per second
+  - 1000 to 1200 = -30.0HP per second
+  - 1200 to 1400 = -50.0HP per second
+  - 1400 to 1600 = -80.0HP per second
+  - 1600 and up = -100.0HP per second
+
+- If you get contaminated you can reduce your radiation level by submerging in water or taking a shower.
+- To completely remove radiation from your system you must take potassium oidide (iodine) tablets.
+
+NOTE: 
+Iodine is a chemical element. The body needs iodine but cannot make it. The needed iodine must come from the diet. As a rule, there is very little iodine in food, unless it has been added during processing, which is now the case with salt. Most of the world’s iodine is found in the ocean, where it is concentrated by sea life, especially seaweed.
+
+Iodine is also used to for radiation emergencies, to protect the thyroid gland against radioactive iodides. Potassium iodide tablets for use in a radiation emergency are available as FDA-approved products (ThyroShield, Iosat) and on the Internet as food supplements. Potassium iodide should only be used in a radiation emergency, not in advance of an emergency to prevent sickness.
