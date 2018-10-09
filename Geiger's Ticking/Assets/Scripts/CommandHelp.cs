@@ -35,6 +35,12 @@ namespace Console
                 "Tells player controller to reapply gravity and collision detection.");
             Debug.Log("quit - " +
                 "Force quits the application without saving.");
+            Debug.Log("newGame - " +
+                "Loads a new game.");
+            Debug.Log("newTestingScene - " +
+                "Loads a new TestingScene.");
+            Debug.Log("mainMenu - " +
+                "Returns to Main Menu.");
         }
 
         public static CommandHelp CreateCommand()

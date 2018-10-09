@@ -52,10 +52,13 @@ namespace Console
 
         private void CreateCommands()
         {
-            CommandHelp commandHelp = CommandHelp.CreateCommand();
-            CommandNoclip commandNoclip = CommandNoclip.CreateCommand();
-            CommandClip commandClip = CommandClip.CreateCommand();
-            CommandQuit commandQuit = CommandQuit.CreateCommand();
+            CommandHelp.CreateCommand();
+            CommandNoclip.CreateCommand();
+            CommandClip.CreateCommand();
+            CommandQuit.CreateCommand();
+            CommandNewGame.CreateCommand();
+            CommandNewTestingScene.CreateCommand();
+            CommandMainMenu.CreateCommand();
         }
 
         public static void AddCommandsToConsole(string name, ConsoleCommand command)
@@ -89,7 +92,7 @@ namespace Console
             // Create Commands
             CreateCommands();
             // Start message
-                        Debug.Log("Type 'help' to see available commands.");
+            Debug.Log("Type 'help' to see available commands.");
         }
 
         private void Update()
@@ -97,6 +100,8 @@ namespace Console
             // If active
             if (consoleCanvas.gameObject.activeInHierarchy)
             {
+                consoleInput.ActivateInputField();
+
                 // If return / enter is pressed
                 if (Input.GetKeyDown(KeyCode.Return))
                 {
