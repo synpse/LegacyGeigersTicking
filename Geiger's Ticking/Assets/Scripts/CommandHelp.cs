@@ -6,9 +6,6 @@ namespace Console
 {
     public class CommandHelp : ConsoleCommand
     {
-        // Header for the sake of organization
-        [Header("Player Components")]
-        public Rigidbody player;
 
         // Overrides
         public override string Name { get; protected set; }
@@ -41,6 +38,8 @@ namespace Console
                 "Loads a new TestingScene.");
             Debug.Log("mainMenu - " +
                 "Returns to Main Menu.");
+            Debug.Log("clear - " +
+                "Clears the console by printing multiple blank paragraphs.");
         }
 
         public static CommandHelp CreateCommand()

@@ -59,6 +59,7 @@ namespace Console
             CommandNewGame.CreateCommand();
             CommandNewTestingScene.CreateCommand();
             CommandMainMenu.CreateCommand();
+            CommandClear.CreateCommand();
         }
 
         public static void AddCommandsToConsole(string name, ConsoleCommand command)

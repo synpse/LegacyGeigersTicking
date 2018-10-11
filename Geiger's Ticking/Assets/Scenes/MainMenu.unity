@@ -767,6 +767,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1031342287}
   m_CullTransparentMesh: 0
+--- !u!114 &1106792088 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114630101119850510, guid: feddca96c2ce1344d9752ff38d7ec0f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1662901647}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1262041055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,6 +1449,11 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114667975940155492, guid: feddca96c2ce1344d9752ff38d7ec0f7,
+        type: 2}
+      propertyPath: consoleText
+      value: 
+      objectReference: {fileID: 1106792088}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feddca96c2ce1344d9752ff38d7ec0f7, type: 2}
   m_IsPrefabAsset: 0
