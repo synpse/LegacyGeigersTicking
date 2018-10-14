@@ -310,6 +310,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ActivateRadEffect.cs" />
     <Compile Include="Assets\Scripts\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\CommandClear.cs" />
     <Compile Include="Assets\Scripts\CommandClip.cs" />
