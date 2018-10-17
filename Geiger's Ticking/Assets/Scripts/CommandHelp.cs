@@ -26,20 +26,26 @@ namespace Console
             Debug.Log("List of available commands:");
             Debug.Log("help - " +
                 "Shows available commands and their usages.");
+            Debug.Log("quit - " +
+                "Force quits the application without saving.");
+            Debug.Log("clear - " +
+                "Clears the console.");
+            Debug.Log("showFps - " +
+                "Shows frames per second.");
+            Debug.Log("hideFps - " +
+                "Hides frames per second.");
             Debug.Log("noclip - " +
                 "Tells player controller to ignore gravity and collision detection.");
             Debug.Log("clip - " +
                 "Tells player controller to reapply gravity and collision detection.");
-            Debug.Log("quit - " +
-                "Force quits the application without saving.");
             Debug.Log("newGame - " +
                 "Loads a new game.");
             Debug.Log("newTestingScene - " +
                 "Loads a new TestingScene.");
             Debug.Log("mainMenu - " +
                 "Returns to Main Menu.");
-            Debug.Log("clear - " +
-                "Clears the console by printing multiple blank paragraphs.");
+            Debug.Log("showRads - " +
+                "Shows accumulated rads.");
         }
 
         public static CommandHelp CreateCommand()

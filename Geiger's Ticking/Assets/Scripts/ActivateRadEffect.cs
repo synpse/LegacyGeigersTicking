@@ -1,13 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PostProcessing;
 
 public class ActivateRadEffect : MonoBehaviour {
 
     [Header("Components")]
     public AudioSource sound;
-    private bool triggerOn = false;
-    private float radsAccumulated;
+    public PostProcessingProfile ppp;
+    public SphereCollider RadiationLow;
+    public SphereCollider RadiationMedium;
+    public SphereCollider RadiationHigh;
+    public SphereCollider RadiationExtreme;
+
+    [HideInInspector]
+    public static float radsAccumulated;
+    GrainModel.Settings grain;
+    ChromaticAberrationModel.Settings aberration;
 
     private void OnTriggerEnter(Collider col)
     {
@@ -15,25 +24,48 @@ public class ActivateRadEffect : MonoBehaviour {
         {
             sound.Play();
             sound.loop = true;
+
             if (gameObject.tag == "RadZoneLow")
             {
-                Debug.Log("Max Radiation intensity: 2.5f (LOW)");
-                Debug.Log("Radiation Accumulation Index: 0f - 2.5f");
+                grain.intensity = 0.3f;
+                grain.size = 1.4f;
+                aberration.intensity = 0.25f;
+                ppp.grain.settings = grain;
+                ppp.chromaticAberration.settings = aberration;
+                Debug.Log("Radiation intensity: LOW");
             }
             if (gameObject.tag == "RadZoneMedium")
             {
-                Debug.Log("Max Radiation intensity: 5.0f (MEDIUM)");
-                Debug.Log("Radiation Accumulation Index: 2.5f - 5f");
+                RadiationLow.enabled = false;
+                grain.intensity = 0.5f;
+                grain.size = 1.6f;
+                aberration.intensity = 0.55f;
+                ppp.grain.settings = grain;
+                ppp.chromaticAberration.settings = aberration;
+                Debug.Log("Radiation intensity: MEDIUM");
             }
             if (gameObject.tag == "RadZoneHigh")
             {
-                Debug.Log("Max Radiation intensity: 7.5f (HIGH)");
-                Debug.Log("Radiation Accumulation Index: 5f - 7.5f");
+                RadiationLow.enabled = false;
+                RadiationMedium.enabled = false;
+                grain.intensity = 0.7f;
+                grain.size = 1.8f;
+                aberration.intensity = 0.85f;
+                ppp.grain.settings = grain;
+                ppp.chromaticAberration.settings = aberration;
+                Debug.Log("Radiation intensity: HIGH");
             }
             if (gameObject.tag == "RadZoneExtreme")
             {
-                Debug.Log("Max Radiation intensity: 10.0f (EXTREME)");
-                Debug.Log("Radiation Accumulation Index: 7.5f - 10f");
+                RadiationLow.enabled = false;
+                RadiationMedium.enabled = false;
+                RadiationHigh.enabled = false;
+                grain.intensity = 1f;
+                grain.size = 2f;
+                aberration.intensity = 1f;
+                ppp.grain.settings = grain;
+                ppp.chromaticAberration.settings = aberration;
+                Debug.Log("Radiation intensity: EXTREME");
             }
         }
     }
@@ -42,7 +74,22 @@ public class ActivateRadEffect : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            radsAccumulated += Random.Range(0f, 10f) * Time.deltaTime;
+            if (gameObject.tag == "RadZoneLow")
+            {
+                radsAccumulated += Random.Range(0.0f, 0.25f);
+            }
+            if (gameObject.tag == "RadZoneMedium")
+            {
+                radsAccumulated += Random.Range(0.0f, 0.5f);
+            }
+            if (gameObject.tag == "RadZoneHigh")
+            {
+                radsAccumulated += Random.Range(0.0f, 0.75f);
+            }
+            if (gameObject.tag == "RadZoneExtreme")
+            {
+                radsAccumulated += Random.Range(0.0f, 1f);
+            }
         }
     }
 
@@ -51,12 +98,27 @@ public class ActivateRadEffect : MonoBehaviour {
         if (col.gameObject.tag == "Player")
         {
             sound.Stop();
-            Debug.Log("Rads Accumulated: " + radsAccumulated);
+            RadiationLow.enabled = true;
+            RadiationMedium.enabled = true;
+            RadiationHigh.enabled = true;
+            grain.intensity = 0f;
+            ppp.grain.settings = grain;
+            aberration.intensity = 0f;
+            ppp.chromaticAberration.settings = aberration;
         }
     }
 
     private void Start()
     {
         sound.Stop();
+        grain = ppp.grain.settings;
+        aberration = ppp.chromaticAberration.settings;
+
+        // Prevents bug in editor
+        grain.intensity = 0f;
+        ppp.grain.settings = grain;
+        aberration.intensity = 0f;
+        ppp.chromaticAberration.settings = aberration;
     }
 }
+

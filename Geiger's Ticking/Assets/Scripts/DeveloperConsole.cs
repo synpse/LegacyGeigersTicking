@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Console
 {
@@ -25,6 +26,7 @@ namespace Console
         // We only need one instantiation of the DeveloperConsole
         public static DeveloperConsole Instance { get; set; }
 
+        // Dictionary
         public static Dictionary<string, ConsoleCommand> Commands { get; set; }
 
         // Header for the sake of organization
@@ -38,9 +40,8 @@ namespace Console
         private void Awake()
         {
             // If an instance is running
-            if(Instance != null)
+            if (Instance != null)
             {
-                // Do nothing
                 return;
             }
 
@@ -60,6 +61,9 @@ namespace Console
             CommandNewTestingScene.CreateCommand();
             CommandMainMenu.CreateCommand();
             CommandClear.CreateCommand();
+            ShowRads.CreateCommand();
+            ShowFps.CreateCommand();
+            HideFps.CreateCommand();
         }
 
         public static void AddCommandsToConsole(string name, ConsoleCommand command)
@@ -115,6 +119,12 @@ namespace Console
                         // Clear input field
                         consoleInput.text = "";
                     }
+                }
+
+                if (CommandClear.clear == true)
+                {
+                    consoleText.text = "";
+                    CommandClear.clear = !CommandClear.clear;
                 }
             }
         }
