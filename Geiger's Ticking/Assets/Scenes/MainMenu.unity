@@ -171,7 +171,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1454,6 +1454,11 @@ Prefab:
       propertyPath: consoleText
       value: 
       objectReference: {fileID: 1106792088}
+    - target: {fileID: 114345718515312074, guid: feddca96c2ce1344d9752ff38d7ec0f7,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feddca96c2ce1344d9752ff38d7ec0f7, type: 2}
   m_IsPrefabAsset: 0

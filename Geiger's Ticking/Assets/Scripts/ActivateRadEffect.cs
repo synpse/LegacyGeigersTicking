@@ -5,16 +5,18 @@ using UnityEngine.PostProcessing;
 
 public class ActivateRadEffect : MonoBehaviour {
 
+    // Header for the sake of organization
     [Header("Components")]
-    public AudioSource sound;
-    public PostProcessingProfile ppp;
-    public SphereCollider RadiationLow;
-    public SphereCollider RadiationMedium;
-    public SphereCollider RadiationHigh;
-    public SphereCollider RadiationExtreme;
 
-    [HideInInspector]
-    public static float radsAccumulated;
+    [SerializeField] private AudioSource sound;
+    [SerializeField] private PostProcessingProfile ppp;
+    [SerializeField] private SphereCollider RadiationLow;
+    [SerializeField] private SphereCollider RadiationMedium;
+    [SerializeField] private SphereCollider RadiationHigh;
+    [SerializeField] private SphereCollider RadiationExtreme;
+
+    [HideInInspector] public static float radsAccumulated;
+
     GrainModel.Settings grain;
     ChromaticAberrationModel.Settings aberration;
 

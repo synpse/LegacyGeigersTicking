@@ -31,11 +31,12 @@ namespace Console
 
         // Header for the sake of organization
         [Header("UI Components")]
-        public Canvas consoleCanvas;
-        public ScrollRect scrollRect;
-        public Text consoleText;
-        public Text inputText;
-        public InputField consoleInput;
+
+        [SerializeField] private Canvas consoleCanvas;
+        [SerializeField] private ScrollRect scrollRect;
+        [SerializeField] private Text consoleText;
+        [SerializeField] private Text inputText;
+        [SerializeField] private InputField consoleInput;
 
         private void Awake()
         {

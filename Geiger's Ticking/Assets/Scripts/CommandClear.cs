@@ -8,6 +8,7 @@ namespace Console
     public class CommandClear : ConsoleCommand
     {
         public static bool clear;
+
         // Overrides
         public override string Name { get; protected set; }
 

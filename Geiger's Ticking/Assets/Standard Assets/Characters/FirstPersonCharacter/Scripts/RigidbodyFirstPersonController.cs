@@ -11,12 +11,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [Serializable]
         public class MovementSettings
         {
-            public float ForwardSpeed = 8.0f;   // Speed when walking forward
-            public float BackwardSpeed = 4.0f;  // Speed when walking backwards
-            public float StrafeSpeed = 4.0f;    // Speed when walking sideways
-            public float RunMultiplier = 2.0f;   // Speed when sprinting
+            public float ForwardSpeed = 3f;   // Speed when walking forward
+            public float BackwardSpeed = 2f;  // Speed when walking backwards
+            public float StrafeSpeed = 2f;    // Speed when walking sideways
+            public float RunMultiplier = 2f;   // Speed multiplier when sprinting
 	        public KeyCode RunKey = KeyCode.LeftShift;
-            public float JumpForce = 30f;
+            public float JumpForce = 40f;
             public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
             [HideInInspector] public float CurrentTargetSpeed = 8f;
 
@@ -80,6 +80,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public Canvas pauseMenuCanvas;
         public Canvas consoleCanvas;
         public Camera cam;
+        public Light lantern;
         public MovementSettings movementSettings = new MovementSettings();
         public MouseLook mouseLook = new MouseLook();
         public AdvancedSettings advancedSettings = new AdvancedSettings();
@@ -124,6 +125,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_RigidBody = GetComponent<Rigidbody>();
             m_Capsule = GetComponent<CapsuleCollider>();
             mouseLook.Init (transform, cam.transform);
+            // Start off
+            lantern.gameObject.SetActive(!lantern.gameObject.activeInHierarchy);
         }
 
 
@@ -147,7 +150,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 consoleCanvas.gameObject.SetActive(!consoleCanvas.gameObject.activeInHierarchy);
             }
 
-            // If active
+            // If "F" is pressed
+            if (Input.GetKeyDown(KeyCode.F) && !pauseMenuCanvas.gameObject.activeInHierarchy
+                && !consoleCanvas.gameObject.activeInHierarchy)
+            {
+                // On keypress turn on or off depending on context
+                // activeInHierarchy returns a bool with active or not active
+                // If ON => OFF, if OFF => ON
+                lantern.gameObject.SetActive(!lantern.gameObject.activeInHierarchy);
+            }
+
+            // If console or pause is active
             if (consoleCanvas.gameObject.activeInHierarchy || pauseMenuCanvas.gameObject.activeInHierarchy)
             {
                 Time.timeScale = 0f;
