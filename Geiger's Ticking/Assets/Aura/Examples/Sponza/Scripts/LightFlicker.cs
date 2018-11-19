@@ -92,6 +92,7 @@ namespace AuraAPI
 
                 //GetComponent<AuraLight>().overridingColor = baseColor * _currentFactor;
                 GetComponent<Light>().color = baseColor * _currentFactor;
+                GetComponentInChildren<Renderer>().material.SetColor("_EmissionColor", baseColor * _currentFactor);
                 _currentPos = Vector3.Lerp(_currentPos, _targetPos, weight);
                 transform.localPosition = _currentPos;
                 _timeLeft -= _deltaTime;

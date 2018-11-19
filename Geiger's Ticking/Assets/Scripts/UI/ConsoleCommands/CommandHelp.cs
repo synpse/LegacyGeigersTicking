@@ -34,7 +34,7 @@ namespace Console
                 "Shows frames per second.");
             Debug.Log("hideFps - " +
                 "Hides frames per second.");
-            Debug.Log("noclip - " +
+            Debug.Log("noClip - " +
                 "Tells player controller to ignore gravity and collision detection.");
             Debug.Log("clip - " +
                 "Tells player controller to reapply gravity and collision detection.");

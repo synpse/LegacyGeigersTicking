@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Console
 {
-    public class CommandNoclip : ConsoleCommand
+    public class CommandNoClip : ConsoleCommand
     {
         // Header for the sake of organization
         [Header("Player Components")]
@@ -16,10 +16,10 @@ namespace Console
         public override string Command { get; protected set; }
 
         // Noclip command
-        public CommandNoclip()
+        public CommandNoClip()
         {
-            Name = "noclip";
-            Command = "noclip";
+            Name = "noClip";
+            Command = "noClip";
 
             AddCommandToConsole();
         }
@@ -33,10 +33,10 @@ namespace Console
             Debug.Log("Gravity and collision detection are now disabled. ");
         }
 
-        public static CommandNoclip CreateCommand()
+        public static CommandNoClip CreateCommand()
         {
             // Returns command
-            return new CommandNoclip();
+            return new CommandNoClip();
         }
     }
 }

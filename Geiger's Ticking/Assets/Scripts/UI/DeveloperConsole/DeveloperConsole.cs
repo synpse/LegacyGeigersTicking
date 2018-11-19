@@ -55,7 +55,7 @@ namespace Console
         private void CreateCommands()
         {
             CommandHelp.CreateCommand();
-            CommandNoclip.CreateCommand();
+            CommandNoClip.CreateCommand();
             CommandClip.CreateCommand();
             CommandQuit.CreateCommand();
             CommandNewGame.CreateCommand();
