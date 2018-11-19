@@ -30,15 +30,15 @@ namespace AuraAPI
     //[ExecuteInEditMode]
     public class LightFlicker : MonoBehaviour
     {
-        private float _currentFactor = 1.0f;
-        private Vector3 _currentPos;
-        private float _deltaTime;
-        private Vector3 _initPos;
-        private float _targetFactor;
-        private Vector3 _targetPos;
+        private float currentFactor = 1.0f;
+        private Vector3 currentPos;
+        private float deltaTime;
+        private Vector3 initPos;
+        private float targetFactor;
+        private Vector3 targetPos;
 
-        private float _time;
-        private float _timeLeft;
+        private float time;
+        private float timeLeft;
         public Color baseColor;
         public float maxFactor = 1.2f;
         public float minFactor = 1.0f;
@@ -50,52 +50,45 @@ namespace AuraAPI
             Random.InitState((int)transform.position.x + (int)transform.position.y);
         }
 
-        //
-
         private void OnEnable()
         {
-            _initPos = transform.localPosition;
-            _currentPos = _initPos;
+            initPos = transform.localPosition;
+            currentPos = initPos;
         }
-
-        //
 
         private void OnDisable()
         {
-            transform.localPosition = _initPos;
+            transform.localPosition = initPos;
         }
-
-        //
 
 #if !UNITY_EDITOR
     private void Update()
     {
-        _deltaTime = Time.deltaTime;
+        deltaTime = Time.deltaTime;
 #else
         void OnRenderObject()
         {
             float currentTime = (float)EditorApplication.timeSinceStartup;
-            _deltaTime = currentTime - _time;
-            _time = currentTime;
+            deltaTime = currentTime - time;
+            time = currentTime;
 #endif
 
-            if (_timeLeft <= _deltaTime)
+            if (timeLeft <= deltaTime)
             {
-                _targetFactor = Random.Range(minFactor, maxFactor);
-                _targetPos = _initPos + Random.insideUnitSphere * moveRange;
-                _timeLeft = speed;
+                targetFactor = Random.Range(minFactor, maxFactor);
+                targetPos = initPos + Random.insideUnitSphere * moveRange;
+                timeLeft = speed;
             }
             else
             {
-                float weight = _deltaTime / _timeLeft;
-                _currentFactor = Mathf.Lerp(_currentFactor, _targetFactor, weight);
+                float weight = deltaTime / timeLeft;
+                currentFactor = Mathf.Lerp(currentFactor, targetFactor, weight);
 
-                //GetComponent<AuraLight>().overridingColor = baseColor * _currentFactor;
-                GetComponent<Light>().color = baseColor * _currentFactor;
-                GetComponentInChildren<Renderer>().material.SetColor("_EmissionColor", baseColor * _currentFactor);
-                _currentPos = Vector3.Lerp(_currentPos, _targetPos, weight);
-                transform.localPosition = _currentPos;
-                _timeLeft -= _deltaTime;
+                GetComponent<Light>().color = baseColor * currentFactor;
+                GetComponentInChildren<Renderer>().material.SetColor("_EmissionColor", baseColor * currentFactor);
+                currentPos = Vector3.Lerp(currentPos, targetPos, weight);
+                transform.localPosition = currentPos;
+                timeLeft -= deltaTime;
             }
         }
     }

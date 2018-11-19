@@ -24,7 +24,7 @@ public class CanvasManager : MonoBehaviour
     void Start()
     {
         HideInteractionPanel();
-	}
+    }
 
     public void HideInteractionPanel()
     {
