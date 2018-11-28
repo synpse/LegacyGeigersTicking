@@ -8,6 +8,10 @@ TagManager:
   - RadZoneMedium
   - RadZoneHigh
   - RadZoneExtreme
+  - Lever
+  - LeverController
+  - Reset
+  - TestButton
   layers:
   - Default
   - TransparentFX
@@ -18,7 +22,7 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
+  - Interact
   - 
   - 
   - 
