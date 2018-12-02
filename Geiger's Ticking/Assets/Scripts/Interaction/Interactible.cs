@@ -6,6 +6,7 @@ public class Interactible : MonoBehaviour
     public bool isActive;
     public bool isPickable;
     public bool allowsMultipleInteractions;
+    public bool interactiveOn;
     public string requirementText;
     public string interactionText;
     public bool consumesRequirements;
@@ -29,6 +30,8 @@ public class Interactible : MonoBehaviour
             InteractIndirects();
 
             ActivateIndirects();
+
+            InteractivesOn();
 
             if (!allowsMultipleInteractions)
                 isInteractive = false;
@@ -69,4 +72,10 @@ public class Interactible : MonoBehaviour
         }
     }
 
+    private void InteractivesOn()
+    {
+        interactiveOn = !interactiveOn;
+
+        Debug.Log($"The state of {this} is now {interactiveOn}");
+    }
 }
