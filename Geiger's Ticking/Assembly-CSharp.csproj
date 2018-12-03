@@ -129,7 +129,7 @@
     <Compile Include="Assets\Scripts\Lights\ForceVolumetricLighting.cs" />
     <Compile Include="Assets\Scripts\Movement(Imported)\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Movement(Imported)\RigidbodyFirstPersonController.cs" />
-    <Compile Include="Assets\Scripts\Puzzle.cs" />
+    <Compile Include="Assets\Scripts\Puzzles\Puzzle.cs" />
     <Compile Include="Assets\Scripts\Radiation\ActivateRadEffect.cs" />
     <Compile Include="Assets\Scripts\Textures\RecalculateTexture.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonManager.cs" />
