@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using AuraAPI;
 
 public class Puzzle : MonoBehaviour
 {
@@ -7,11 +6,15 @@ public class Puzzle : MonoBehaviour
     public GameObject objLever2;
     public GameObject objLever3;
     public GameObject objElevatorPowerButton;
+    public GameObject unknownEntity;
+
     private Interactible lever1;
     private Interactible lever2;
     private Interactible lever3;
     private Interactible elevatorPowerButton;
+
     private bool ended;
+    private bool interacted;
 
     private void Start()
     {
@@ -19,6 +22,7 @@ public class Puzzle : MonoBehaviour
         lever2 = objLever2.gameObject.GetComponent<Interactible>();
         lever3 = objLever3.gameObject.GetComponent<Interactible>();
         elevatorPowerButton = objElevatorPowerButton.gameObject.GetComponent<Interactible>();
+        unknownEntity.GetComponent<Renderer>().enabled = false;
     }
 
     private void Update()
@@ -26,6 +30,11 @@ public class Puzzle : MonoBehaviour
         if (!ended)
         {
             Check();
+        }
+
+        if (!interacted)
+        {
+            PowerButtonListener();
         }
     }
 
@@ -39,6 +48,15 @@ public class Puzzle : MonoBehaviour
             elevatorPowerButton.isInteractive = true;
             Debug.Log("Puzzle completed!");
             ended = true;
+        }
+    }
+
+    private void PowerButtonListener()
+    {
+        if (elevatorPowerButton.interactiveOn == true)
+        {
+            unknownEntity.GetComponent<Renderer>().enabled = true;
+            interacted = true;
         }
     }
 }

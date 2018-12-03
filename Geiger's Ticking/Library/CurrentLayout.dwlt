@@ -108,7 +108,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 12006, y: 14042}
   vertical: 0
-  controlID: 5057
+  controlID: 14332
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 12006, y: 14042}
   vertical: 1
-  controlID: 5058
+  controlID: 14333
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 221}
   m_MaxSize: {x: 12006, y: 4021}
   vertical: 0
-  controlID: 5059
+  controlID: 14334
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -264,7 +264,7 @@ MonoBehaviour:
   - {fileID: 21}
   - {fileID: 22}
   m_Selected: 0
-  m_LastSelected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -373,7 +373,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: fc5ffcffe6fbffff00000000ce500000ea500000
+    m_ExpandedIDs: 68b4faffe4b4faff74b6faff02b7faff26bdfaff0c5dfbff4e5efbffde5ffbff6c60fbff9066fbff9a9fffff9aa5ffff000000005a6200000a6600001cbf0700
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -389,7 +389,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 8}
+      m_ClientGUIView: {fileID: 9}
     m_SearchString: 
   m_ExpandedScenes:
   - TestingScene
@@ -428,9 +428,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 39.746803, y: -7.4029646, z: 136.18903}
+    m_Target: {x: 44.772705, y: -23.221933, z: -52.792355}
     speed: 2
-    m_Value: {x: 39.746803, y: -7.4029646, z: 136.18903}
+    m_Value: {x: 44.772705, y: -23.221933, z: -52.792355}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -458,13 +458,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.046002116, y: -0.31388894, z: 0.0152296275, w: -0.9482224}
+    m_Target: {x: 0.05567718, y: 0.88772464, z: -0.11152935, w: 0.44317755}
     speed: 2
-    m_Value: {x: -0.046002116, y: -0.31388894, z: 0.015229628, w: -0.9482224}
+    m_Value: {x: 0.055677176, y: 0.88772464, z: -0.11152934, w: 0.44317752}
   m_Size:
-    m_Target: 127.71098
+    m_Target: 120.51471
     speed: 2
-    m_Value: 127.71098
+    m_Value: 120.51471
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -849,7 +849,7 @@ MonoBehaviour:
     height: 555
   m_PersistentViewDataDictionary: {fileID: 0}
   m_VertSplit:
-    ID: 740
+    ID: 8563
     splitterInitialOffset: 164
     currentActiveSplitter: -1
     realSizes: f200000029010000
@@ -1220,20 +1220,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Standard Assets/PostProcessing
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Standard Assets/PostProcessing
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\secretradiacao\Geiger's Ticking
+  m_LastProjectPath: C:\Users\Tiago Alves\Desktop\secretradiacao\Geiger's Ticking
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7e3f0000
-    m_LastClickedID: 16254
-    m_ExpandedIDs: 00000000262c0000a42d0000fe2f000074310000dc31000080320000ca330000be3500007e3f000024400000da400000c8590000ca590000cc590000ce590000d0590000d2590000d4590000d6590000d8590000
+    scrollPos: {x: 0, y: 51}
+    m_SelectedIDs: 88470000
+    m_LastClickedID: 18312
+    m_ExpandedIDs: 00000000fc450000fa46000080480000c64800006e490000ac490000144a0000ec4a0000344c0000fa55000068560000c66e0000c86e0000ca6e0000cc6e0000ce6e0000d06e0000d26e0000d46e0000d66e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1261,7 +1261,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000262c0000a42d0000fe2f000074310000dc31000080320000ca330000be3500007e3f000024400000da400000c8590000ca590000cc590000ce590000d0590000d2590000d4590000d6590000d8590000
+    m_ExpandedIDs: 00000000fc450000fa46000080480000c64800006e490000ac490000144a0000ec4a0000344c0000fa55000068560000c66e0000c86e0000ca6e0000cc6e0000ce6e0000d06e0000d26e0000d46e0000d66e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1369,4 +1369,4 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -237572
+  m_LastSelectedObjectID: 507676

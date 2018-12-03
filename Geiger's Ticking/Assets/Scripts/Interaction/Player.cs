@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
     private Interactible        _currentInteractible;
     private List<Interactible>  _inventory;
 
+    public GameObject unknownEntity;
+    private bool ended;
+
     private void Start()
     {
         _canvasManager = CanvasManager.instance;
@@ -28,6 +31,11 @@ public class Player : MonoBehaviour
     {
         CheckForInteractible();
         CheckForInteractionClick();
+
+        if (!ended)
+        {
+            CheckForUnknownEntity();
+        }
     }
 
     private void CheckForInteractible()
@@ -55,6 +63,7 @@ public class Player : MonoBehaviour
                 AddToInventory(_currentInteractible);
             else if (HasRequirements(_currentInteractible))
                 Interact(_currentInteractible);
+            Debug.Log($"Hit with {_raycastHit.collider} with distance {_raycastHit.distance}");
         }
     }
 
@@ -115,4 +124,26 @@ public class Player : MonoBehaviour
         _inventory.Remove(pickable);
     }
 
+    private void CheckForUnknownEntity()
+    {
+        if (unknownEntity.GetComponent<Renderer>().enabled == true)
+        {
+            if (Physics.Raycast(_camera.transform.position,
+            _camera.transform.forward, out _raycastHit, 1000))
+            {
+                if (_raycastHit.collider.gameObject.name == "unknown")
+                {
+                    Debug.Log($"Hit with {_raycastHit.collider} with distance {_raycastHit.distance}");
+                    StartCoroutine("DespawnUnknownEntity");
+                    ended = true;
+                }
+            }
+        }
+    }
+
+    IEnumerator DespawnUnknownEntity()
+    {
+        yield return new WaitForSeconds(1);
+        unknownEntity.GetComponent<Renderer>().enabled = false;
+    }
 }
