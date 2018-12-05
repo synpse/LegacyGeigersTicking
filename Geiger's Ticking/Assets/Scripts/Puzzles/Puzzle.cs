@@ -44,10 +44,13 @@ public class Puzzle : MonoBehaviour
             (lever2.interactiveOn == true) &&
             (lever3.interactiveOn == true))
         {
-            elevatorPowerButton.Activate();
+            elevatorPowerButton.isActive = true;
             elevatorPowerButton.isInteractive = true;
-            Debug.Log("Puzzle completed!");
-            ended = true;
+        }
+        else
+        {
+            elevatorPowerButton.isActive = false;
+            elevatorPowerButton.isInteractive = false;
         }
     }
 
@@ -55,7 +58,12 @@ public class Puzzle : MonoBehaviour
     {
         if (elevatorPowerButton.interactiveOn == true)
         {
+            ended = true;
+            // Force deactivation
+            elevatorPowerButton.isActive = false;
+            elevatorPowerButton.isInteractive = false;
             unknownEntity.GetComponent<Renderer>().enabled = true;
+            Debug.Log("Puzzle completed!");
             interacted = true;
         }
     }

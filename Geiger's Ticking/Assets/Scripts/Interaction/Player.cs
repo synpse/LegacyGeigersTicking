@@ -96,13 +96,6 @@ public class Player : MonoBehaviour
 
         _currentInteractible = null;
 
-        if (_currentInteractible != null)
-        {
-            Outline outline = _currentInteractible.GetComponent<Outline>();
-            outline.OutlineWidth = 0f;
-            Destroy(_currentInteractible.GetComponent<Outline>());
-        }
-
         _canvasManager.HideInteractionPanel();
     }
 
