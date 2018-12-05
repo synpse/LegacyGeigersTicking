@@ -10,7 +10,7 @@ public class UnknownEntityBehaviour1 : MonoBehaviour {
     public GameObject _unknownEntity;
     private bool ended;
 
-    public Light _flash;
+    public Light _light;
 	
 	void Update ()
     {
@@ -46,15 +46,14 @@ public class UnknownEntityBehaviour1 : MonoBehaviour {
 
     IEnumerator LightFlashOn()
     {
-        yield return new WaitForSeconds(1.95f);
-        _flash.intensity = 100f;
+        yield return new WaitForSeconds(1.8f);
+        _light.intensity = 0f;
         StartCoroutine("LightFlashOff");
     }
 
     IEnumerator LightFlashOff()
     {
-        yield return new WaitForSeconds(0.05f);
-        _flash.intensity = 0f;
-        _flash.gameObject.GetComponent<LightFlicker>().enabled = false;
+        yield return new WaitForSeconds(0.20f);
+        _light.intensity = 1f;
     }
 }

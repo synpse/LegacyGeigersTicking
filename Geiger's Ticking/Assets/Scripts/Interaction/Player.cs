@@ -39,12 +39,18 @@ public class Player : MonoBehaviour
             Interactible newInteractible = _raycastHit.collider.GetComponent<Interactible>();
 
             if (newInteractible != null && newInteractible.isInteractive)
+            {
                 SetInteractible(newInteractible);
+            }
             else
+            {
                 ClearInteractible();
+            }
         }
         else
+        {
             ClearInteractible();
+        }
     }
 
     private void CheckForInteractionClick()
@@ -63,6 +69,15 @@ public class Player : MonoBehaviour
     {
         _currentInteractible = newInteractible;
 
+        if (_currentInteractible.GetComponent<Outline>() == null)
+        {
+            _currentInteractible.gameObject.AddComponent<Outline>();
+        }
+
+        Outline outline = _currentInteractible.GetComponent<Outline>();
+        outline.OutlineColor = Color.yellow;
+        outline.OutlineWidth = 5f;
+
         if (HasRequirements(_currentInteractible))
             _canvasManager.ShowInteractionPanel(_currentInteractible.interactionText);
         else
@@ -71,6 +86,14 @@ public class Player : MonoBehaviour
 
     private void ClearInteractible()
     {
+        // This avoids an annoying yet harmless error
+        if (_currentInteractible != null)
+        {
+            Outline outline = _currentInteractible.GetComponent<Outline>();
+            outline.OutlineWidth = 0f;
+            Destroy(_currentInteractible.GetComponent<Outline>());
+        }
+
         _currentInteractible = null;
 
         _canvasManager.HideInteractionPanel();

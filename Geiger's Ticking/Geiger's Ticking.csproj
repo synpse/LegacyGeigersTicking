@@ -710,6 +710,8 @@
     <Compile Include="Assets\Aura\Structs\VolumeInjectionShape.cs" />
     <Compile Include="Assets\Aura\Structs\VolumeLevelsData.cs" />
     <Compile Include="Assets\Aura\Structs\VolumeTextureData.cs" />
+    <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
+    <Compile Include="Assets\Scripts\Behaviours\UnknownEntityBehaviour1.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactible.cs" />
     <Compile Include="Assets\Scripts\Interaction\Player.cs" />
     <Compile Include="Assets\Scripts\Lights\ForceVolumetricLighting.cs" />
@@ -735,8 +737,6 @@
     <Compile Include="Assets\Scripts\UI\DisplayFPS.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
-    <Compile Include="Assets\UnknownEntityBehaviour1.cs" />
-    <Compile Include="Assets\unkownEntityBehaviour1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Aura\Editor\Shaders\ColorFieldDrawerShader.shader" />
@@ -773,6 +773,9 @@
     <None Include="Assets\Aura\Shaders\Shaders\StoreShadowDataShader.shader" />
     <None Include="Assets\Aura\Shaders\Shaders\Surface\AuraStandardAlphaBlended.shader" />
     <None Include="Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
+    <None Include="Assets\QuickOutline\Readme.txt" />
+    <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
+    <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\Standard Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
