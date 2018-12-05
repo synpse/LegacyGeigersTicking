@@ -5,6 +5,7 @@
 //  Created by Chris Nolet on 3/30/18.
 //  Copyright © 2018 Chris Nolet. All rights reserved.
 //
+// Note: This script has been modified
 
 using System;
 using System.Collections.Generic;

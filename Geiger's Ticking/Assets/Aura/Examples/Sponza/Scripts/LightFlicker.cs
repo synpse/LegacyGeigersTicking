@@ -34,16 +34,16 @@ namespace AuraAPI
         private Vector3 currentPos;
         private float deltaTime;
         private Vector3 initPos;
-        private float targetFactor;
+        private int targetFactor;
         private Vector3 targetPos;
 
         private float time;
         private float timeLeft;
         public Color baseColor;
-        public float maxFactor = 1.2f;
-        public float minFactor = 1.0f;
-        public float moveRange = 0.1f;
-        public float speed = 0.1f;
+        public int maxFactor;
+        public int minFactor;
+        public float moveRange;
+        public float speed;
 
         private void Start()
         {

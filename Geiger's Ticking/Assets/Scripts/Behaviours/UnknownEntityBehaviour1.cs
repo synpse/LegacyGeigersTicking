@@ -30,30 +30,24 @@ public class UnknownEntityBehaviour1 : MonoBehaviour {
                 if (_raycastHit.collider.gameObject.name == "unknown")
                 {
                     Debug.Log($"Hit with {_raycastHit.collider} with distance {_raycastHit.distance}");
-                    StartCoroutine("DespawnUnknownEntity");
-                    StartCoroutine("LightFlashOn");
+                    StartCoroutine("LightOff");
                     ended = true;
                 }
             }
         }
     }
 
-    IEnumerator DespawnUnknownEntity()
+    IEnumerator LightOff()
     {
-        yield return new WaitForSeconds(2f);
-        _unknownEntity.GetComponent<Renderer>().enabled = false;
-    }
-
-    IEnumerator LightFlashOn()
-    {
-        yield return new WaitForSeconds(1.8f);
+        yield return new WaitForSeconds(0.25f);
         _light.intensity = 0f;
-        StartCoroutine("LightFlashOff");
+        StartCoroutine("LightOn");
     }
 
-    IEnumerator LightFlashOff()
+    IEnumerator LightOn()
     {
-        yield return new WaitForSeconds(0.20f);
+        yield return new WaitForSeconds(1f);
+        _unknownEntity.GetComponent<Renderer>().enabled = false;
         _light.intensity = 1f;
     }
 }
