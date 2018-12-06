@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Tiago Alves/Desktop/Geiger's Ticking.exe
+C:/Users/Diogo Maia/Desktop/Geiger's Build/Geiger's Ticking.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/MainScene.unity
