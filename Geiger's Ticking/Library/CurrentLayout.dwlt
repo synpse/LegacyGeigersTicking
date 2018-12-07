@@ -108,7 +108,7 @@ MonoBehaviour:
   m_MinSize: {x: 778, y: 682}
   m_MaxSize: {x: 12008, y: 14042}
   vertical: 0
-  controlID: 3419
+  controlID: 2177
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_MinSize: {x: 778, y: 682}
   m_MaxSize: {x: 12008, y: 14042}
   vertical: 1
-  controlID: 3420
+  controlID: 2178
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 778, y: 411}
   m_MaxSize: {x: 12008, y: 4021}
   vertical: 0
-  controlID: 3421
+  controlID: 2179
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -371,10 +371,10 @@ MonoBehaviour:
     height: 475
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 838}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 70e9fcff8205fdff0606fdff9407fdff2208fdff460efdff547afeffa44cffff4282ffffba82ffff4884ffffd684fffffa8affff40a2ffff00000000a2a9000092af00005cb700003ec20000da8e01002ea90100
+    scrollPos: {x: 0, y: 214}
+    m_SelectedIDs: 74f0fdff
+    m_LastClickedID: -135052
+    m_ExpandedIDs: d8b8feffdcb8feffdeb8fefff8d0feffe6fbffff00000000b4460000ac4f0000a6500000f251000044520000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -429,9 +429,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -23.275356, y: 6.0781484, z: -9.824976}
+    m_Target: {x: -56.211597, y: 11.055411, z: -17.902401}
     speed: 2
-    m_Value: {x: -23.275356, y: 6.0781484, z: -9.824976}
+    m_Value: {x: -56.211597, y: 11.055411, z: -17.902401}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -459,13 +459,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.0012615037, y: 0.77304643, z: -0.0015379915, w: 0.6343463}
+    m_Target: {x: -0.050595965, y: 0.82109433, z: 0.073692165, w: 0.56374955}
     speed: 2
-    m_Value: {x: 0.0012615037, y: 0.77304643, z: -0.0015379915, w: 0.6343463}
+    m_Value: {x: -0.050595965, y: 0.82109433, z: 0.07369217, w: 0.56374955}
   m_Size:
-    m_Target: 46.416744
+    m_Target: 39.858643
     speed: 2
-    m_Value: 46.416744
+    m_Value: 39.858643
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -785,9 +785,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1159
+    x: 1070
     y: 92
-    width: 281
+    width: 370
     height: 475
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
@@ -1221,21 +1221,21 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/3D Models
+    - Assets/Textures
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/3D Models
+  - Assets/Textures
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Diogo Maia\Desktop\Projects Y2S1\Geiger's Ticking\secretradiacao\Geiger's
     Ticking
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 16560000
-    m_LastClickedID: 22038
-    m_ExpandedIDs: 000000007046000070470000fe480000f0490000304a00009a4a00008c4b0000da4c0000e2550000a6560000145700000a6f00000c6f00000e6f0000106f0000126f0000146f0000166f0000186f00001a6f000000ca9a3b
+    scrollPos: {x: 0, y: 199}
+    m_SelectedIDs: 943f0000
+    m_LastClickedID: 16276
+    m_ExpandedIDs: 00000000302c0000b02d000026300000a23100000c320000b43200001a340000163600002c3f0000944000004a410000a65b0000a85b0000aa5b0000ac5b0000ae5b0000b05b0000b25b0000b45b0000b65b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1263,7 +1263,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007046000070470000fe480000f0490000304a00009a4a00008c4b0000da4c0000e2550000a6560000145700000a6f00000c6f00000e6f0000106f0000126f0000146f0000166f0000186f00001a6f000000ca9a3b
+    m_ExpandedIDs: 00000000302c0000b02d000026300000a23100000c320000b43200001a340000163600002c3f0000944000004a410000a65b0000a85b0000aa5b0000ac5b0000ae5b0000b05b0000b25b0000b45b0000b65b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1290,7 +1290,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000462b000032340000c0ddffffae290000c6590200cc1a02006ade000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1371,7 +1371,7 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 100724
+  m_LastSelectedObjectID: -135052
 --- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
