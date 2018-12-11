@@ -4,14 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - RadZoneLow
-  - RadZoneMedium
-  - RadZoneHigh
-  - RadZoneExtreme
-  - Lever
-  - LeverController
-  - Reset
-  - TestButton
+  - RadZone
   layers:
   - Default
   - TransparentFX
