@@ -162,7 +162,7 @@
     <None Include="Assets\Aura\Shaders\Shaders\PostProcessShader.shader" />
     <None Include="Assets\QuickOutline\Readme.txt" />
     <None Include="Assets\Aura\Shaders\ComputeShaders\ComputeDataComputeShader.compute" />
-    <None Include="Assets\Industrial Props\ReadMe.txt" />
+    <None Include="Assets\3D Models\Industrial Props\ReadMe.txt" />
     <None Include="Assets\Aura\Shaders\ComputeShaders\Includes\DirectionalLightInjection.cginc" />
     <None Include="Assets\Aura\Examples\Sponza\Fireball\FireballBlendAdd.shader" />
     <None Include="Assets\Aura\Shaders\Includes\AuraParticlesUsage.cginc" />

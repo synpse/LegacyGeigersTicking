@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private RaycastHit          _raycastHit;
     private Interactible        _currentInteractible;
     private List<Interactible>  _inventory;
+    private Color               _orange;
 
     private Interactible lastInteractible;
     private bool saved;
@@ -25,6 +26,8 @@ public class Player : MonoBehaviour
         _currentInteractible = null;
 
         _inventory = new List<Interactible>(inventorySize);
+
+        _orange = new Color(1.0f, 0.64f, 0.0f);
     }
 
     void Update()
@@ -80,8 +83,8 @@ public class Player : MonoBehaviour
 
         // The object is an interactible and we're raycasting it, so outline it
         Outline outline = _currentInteractible.GetComponent<Outline>();
-        outline.OutlineColor = Color.yellow;
-        outline.OutlineWidth = 5f;
+        outline.OutlineColor = _orange;
+        outline.OutlineWidth = 9f;
 
         // We haven't saved this new interactible, then save it
         // It will be used later to compare new interactibles with the old one
