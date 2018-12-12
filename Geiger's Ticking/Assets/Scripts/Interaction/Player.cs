@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
     private Interactible        _currentInteractible;
     private List<Interactible>  _inventory;
 
+    private Interactible lastInteractible;
+    private bool saved;
+
     private void Start()
     {
         _canvasManager = CanvasManager.instance;
@@ -69,14 +72,35 @@ public class Player : MonoBehaviour
     {
         _currentInteractible = newInteractible;
 
+        // If the interactible has no Outline component, add it
         if (_currentInteractible.GetComponent<Outline>() == null)
         {
             _currentInteractible.gameObject.AddComponent<Outline>();
         }
 
+        // The object is an interactible and we're raycasting it, so outline it
         Outline outline = _currentInteractible.GetComponent<Outline>();
         outline.OutlineColor = Color.yellow;
         outline.OutlineWidth = 5f;
+
+        // We haven't saved this new interactible, then save it
+        // It will be used later to compare new interactibles with the old one
+        if (saved == false)
+        {
+            lastInteractible = newInteractible;
+            saved = true;
+        }
+
+        // We compare the current object with the last one
+        // If it is different, then we set the outline of the last one to 0
+        // This will avoid duplicates and having the last object forever highlighted
+        // Note: This only applies if we suddenly passed from object x to object y
+        // without raycasting a non-interactible one in between
+        if (_currentInteractible != lastInteractible)
+        {
+            Outline lastOutline = lastInteractible.GetComponent<Outline>();
+            lastOutline.OutlineWidth = 0f;
+        }
 
         if (HasRequirements(_currentInteractible))
             _canvasManager.ShowInteractionPanel(_currentInteractible.interactionText);
@@ -86,12 +110,15 @@ public class Player : MonoBehaviour
 
     private void ClearInteractible()
     {
-        // This avoids an annoying yet harmless error
-        if (_currentInteractible != null)
+        // We clear the highlights on interactibles we're not using
+        // With this we're also reinforcing what we did before
+        if (saved == true)
         {
+            Outline lastOutline = lastInteractible.GetComponent<Outline>();
+            lastOutline.OutlineWidth = 0f;
             Outline outline = _currentInteractible.GetComponent<Outline>();
             outline.OutlineWidth = 0f;
-            Destroy(_currentInteractible.GetComponent<Outline>());
+            saved = false;
         }
 
         _currentInteractible = null;

@@ -2,11 +2,10 @@
 
 public class Puzzle : MonoBehaviour
 {
-    public GameObject objLever1;
-    public GameObject objLever2;
-    public GameObject objLever3;
-    public GameObject objElevatorPowerButton;
-    public GameObject unknownEntity;
+    public GameObject _objLever1;
+    public GameObject _objLever2;
+    public GameObject _objLever3;
+    public GameObject _objElevatorPowerButton;
 
     private Interactible lever1;
     private Interactible lever2;
@@ -18,11 +17,10 @@ public class Puzzle : MonoBehaviour
 
     private void Start()
     {
-        lever1 = objLever1.gameObject.GetComponent<Interactible>();
-        lever2 = objLever2.gameObject.GetComponent<Interactible>();
-        lever3 = objLever3.gameObject.GetComponent<Interactible>();
-        elevatorPowerButton = objElevatorPowerButton.gameObject.GetComponent<Interactible>();
-        unknownEntity.GetComponent<Renderer>().enabled = false;
+        lever1 = _objLever1.gameObject.GetComponent<Interactible>();
+        lever2 = _objLever2.gameObject.GetComponent<Interactible>();
+        lever3 = _objLever3.gameObject.GetComponent<Interactible>();
+        elevatorPowerButton = _objElevatorPowerButton.gameObject.GetComponent<Interactible>();
     }
 
     private void Update()
@@ -62,7 +60,6 @@ public class Puzzle : MonoBehaviour
             // Force deactivation
             elevatorPowerButton.isActive = false;
             elevatorPowerButton.isInteractive = false;
-            unknownEntity.GetComponent<Renderer>().enabled = true;
             Debug.Log("Puzzle completed!");
             interacted = true;
         }
