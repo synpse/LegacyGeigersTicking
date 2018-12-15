@@ -711,7 +711,7 @@
     <Compile Include="Assets\Aura\Structs\VolumeLevelsData.cs" />
     <Compile Include="Assets\Aura\Structs\VolumeTextureData.cs" />
     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
-    <Compile Include="Assets\Scripts\Behaviours\UnknownEntityBehaviour1.cs" />
+    <Compile Include="Assets\Scripts\Behaviours\[DEPRECATED]UnknownEntityBehaviour1.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactible.cs" />
     <Compile Include="Assets\Scripts\Interaction\Player.cs" />
     <Compile Include="Assets\Scripts\Lights\ForceVolumetricLighting.cs" />
@@ -739,6 +739,7 @@
     <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\3D Models\Industrial Props\ReadMe.txt" />
     <None Include="Assets\Aura\Editor\Shaders\ColorFieldDrawerShader.shader" />
     <None Include="Assets\Aura\Editor\Shaders\Texture3DPreviewShader.shader" />
     <None Include="Assets\Aura\Examples\Sponza\Fireball\FireballBlendAdd.shader" />

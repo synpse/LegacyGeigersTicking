@@ -81,6 +81,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public Canvas consoleCanvas;
         public Camera cam;
         public Light lantern;
+        public Light lantern2;
         public MovementSettings movementSettings = new MovementSettings();
         public MouseLook mouseLook = new MouseLook();
         public AdvancedSettings advancedSettings = new AdvancedSettings();
@@ -90,6 +91,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_YRotation;
         private Vector3 m_GroundContactNormal;
         private bool m_Jump, m_PreviouslyGrounded, m_Jumping, m_IsGrounded;
+        private bool crouching;
+        private bool keydown;
 
 
         public Vector3 Velocity
@@ -127,6 +130,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             mouseLook.Init (transform, cam.transform);
             // Start off
             lantern.gameObject.SetActive(!lantern.gameObject.activeInHierarchy);
+            lantern2.gameObject.SetActive(!lantern2.gameObject.activeInHierarchy);
         }
 
 
@@ -158,6 +162,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 // activeInHierarchy returns a bool with active or not active
                 // If ON => OFF, if OFF => ON
                 lantern.gameObject.SetActive(!lantern.gameObject.activeInHierarchy);
+                lantern2.gameObject.SetActive(!lantern2.gameObject.activeInHierarchy);
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                gameObject.GetComponent<CapsuleCollider>().height = gameObject.GetComponent<CapsuleCollider>().height / 2;
+            }
+
+            if (Input.GetKeyUp(KeyCode.LeftControl))
+            {
+                gameObject.GetComponent<CapsuleCollider>().height = gameObject.GetComponent<CapsuleCollider>().height * 2;
             }
 
             // If console or pause is active

@@ -743,6 +743,7 @@
     <Compile Include="Assets\Standard Assets\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\3D Models\Industrial Props\ReadMe.txt" />
     <None Include="Assets\Aura\Editor\Shaders\ColorFieldDrawerShader.shader" />
     <None Include="Assets\Aura\Editor\Shaders\Texture3DPreviewShader.shader" />
     <None Include="Assets\Aura\Examples\Sponza\Fireball\FireballBlendAdd.shader" />
