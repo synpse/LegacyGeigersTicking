@@ -12,9 +12,4 @@ public class PauseMenu : MonoBehaviour {
         // Disable console at start
         pauseMenuCanvas.gameObject.SetActive(false);
     }
-	
-	void Update ()
-    {
-
-    }
 }

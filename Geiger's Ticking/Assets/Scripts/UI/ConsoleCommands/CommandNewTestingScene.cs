@@ -23,7 +23,7 @@ namespace Console
 
         public override void RunCommand()
         {
-            SceneManager.LoadScene("TestingScene");
+            LevelChanger.Instance.FadeToLevel(2);
             Debug.Log("Loading TestingScene... ");
         }
 
