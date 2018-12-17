@@ -124,9 +124,11 @@
     <Compile Include="Assets\Aura\Structs\VolumeInjectionShape.cs" />
     <Compile Include="Assets\Aura\Structs\VolumeLevelsData.cs" />
     <Compile Include="Assets\Aura\Structs\VolumeTextureData.cs" />
+    <Compile Include="Assets\OldRadio\Alpinist\CamRotat.cs" />
     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\Scripts\Behaviours\[DEPRECATED]UnknownEntityBehaviour1.cs" />
     <Compile Include="Assets\Scripts\Behaviours\ElevatorDoorsOpen.cs" />
+    <Compile Include="Assets\Scripts\Behaviours\EndHere.cs" />
     <Compile Include="Assets\Scripts\Behaviours\EndLevel0.cs" />
     <Compile Include="Assets\Scripts\Behaviours\OnDoorOpen.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactible.cs" />
@@ -164,6 +166,7 @@
     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
     <None Include="Assets\Aura\License\license.txt" />
     <None Include="Assets\Aura\Shaders\Shaders\StorePointLightCookieMap.shader" />
+    <None Include="Assets\OldRadio\Alpinist\ReadMe.txt" />
     <None Include="Assets\Aura\Shaders\Shaders\StoreShadowDataShader.shader" />
     <None Include="Assets\Aura\Shaders\Shaders\StoreDirectionalSpotLightCookieMap.shader" />
     <None Include="Assets\Aura\Shaders\Includes\CommonVariables.cginc" />

@@ -26,8 +26,29 @@ public class ActivateRadEffect : MonoBehaviour {
     private bool inRadZoneHigh;
     private bool inRadZoneExtr;
 
+    private RigidbodyFirstPersonController player;
+
     private GrainModel.Settings _grain;
     private ChromaticAberrationModel.Settings _aberration;
+
+    private void Awake()
+    {
+        _sound.loop = true;
+        _sound.Stop();
+        _grain = _ppp.grain.settings;
+        _aberration = _ppp.chromaticAberration.settings;
+
+        // Prevents bug in editor
+        _grain.intensity = 0f;
+        _aberration.intensity = 0f;
+        _ppp.grain.settings = _grain;
+        _ppp.chromaticAberration.settings = _aberration;
+    }
+
+    private void Start()
+    {
+        player = _player.GetComponent<RigidbodyFirstPersonController>();
+    }
 
     private void OnTriggerStay(Collider col)
     {
@@ -38,7 +59,7 @@ public class ActivateRadEffect : MonoBehaviour {
                 radZoneRadius = (gameObject.transform.position - _player.transform.position).magnitude;
 
                 // The feedback should decrease with distance from the center.
-                radIntensity = 1f / radZoneRadius;
+                radIntensity = 1.2f / radZoneRadius;
 
                 _grain.intensity = radIntensity * 2f;
                 _grain.size = 2f;
@@ -49,6 +70,10 @@ public class ActivateRadEffect : MonoBehaviour {
                 if (radIntensity > 0f && radIntensity <= 0.2f)
                 {
                     radsAccumulated += Random.Range(0f, 0.2f);
+
+                    player.movementSettings.ForwardSpeed = 2f;
+                    player.movementSettings.BackwardSpeed = 1f;
+                    player.movementSettings.StrafeSpeed = 1f;
 
                     inRadZoneMed = false;
                     inRadZoneHigh = false;
@@ -66,6 +91,10 @@ public class ActivateRadEffect : MonoBehaviour {
                 {
                     radsAccumulated += Random.Range(0.2f, 0.4f);
 
+                    player.movementSettings.ForwardSpeed = 1f;
+                    player.movementSettings.BackwardSpeed = 0.5f;
+                    player.movementSettings.StrafeSpeed = 0.5f;
+
                     inRadZoneLow = false;
                     inRadZoneHigh = false;
                     inRadZoneExtr = false;
@@ -82,6 +111,10 @@ public class ActivateRadEffect : MonoBehaviour {
                 {
                     radsAccumulated += Random.Range(0.4f, 0.6f);
 
+                    player.movementSettings.ForwardSpeed = 0.5f;
+                    player.movementSettings.BackwardSpeed = 0.25f;
+                    player.movementSettings.StrafeSpeed = 0.25f;
+
                     inRadZoneLow = false;
                     inRadZoneMed = false;
                     inRadZoneExtr = false;
@@ -97,6 +130,10 @@ public class ActivateRadEffect : MonoBehaviour {
                 if (radIntensity > 0.6f)
                 {
                     radsAccumulated += Random.Range(0.6f, 1f);
+
+                    player.movementSettings.ForwardSpeed = 0.25f;
+                    player.movementSettings.BackwardSpeed = 0.1f;
+                    player.movementSettings.StrafeSpeed = 0.1f;
 
                     inRadZoneLow = false;
                     inRadZoneMed = false;
@@ -126,21 +163,10 @@ public class ActivateRadEffect : MonoBehaviour {
             _aberration.intensity = 0f;
             _ppp.grain.settings = _grain;
             _ppp.chromaticAberration.settings = _aberration;
+            player.movementSettings.ForwardSpeed = 3f;
+            player.movementSettings.BackwardSpeed = 2f;
+            player.movementSettings.StrafeSpeed = 2f;
         }
-    }
-
-    private void Awake()
-    {
-        _sound.loop = true;
-        _sound.Stop();
-        _grain = _ppp.grain.settings;
-        _aberration = _ppp.chromaticAberration.settings;
-
-        // Prevents bug in editor
-        _grain.intensity = 0f;
-        _aberration.intensity = 0f;
-        _ppp.grain.settings = _grain;
-        _ppp.chromaticAberration.settings = _aberration;
     }
 }
 
