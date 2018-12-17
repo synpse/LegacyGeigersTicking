@@ -124,6 +124,9 @@
     <Compile Include="Assets\Aura\Structs\VolumeInjectionShape.cs" />
     <Compile Include="Assets\Aura\Structs\VolumeLevelsData.cs" />
     <Compile Include="Assets\Aura\Structs\VolumeTextureData.cs" />
+    <Compile Include="Assets\Dialogue.cs" />
+    <Compile Include="Assets\DialogueManager.cs" />
+    <Compile Include="Assets\DialogueTrigger.cs" />
     <Compile Include="Assets\OldRadio\Alpinist\CamRotat.cs" />
     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\Scripts\Behaviours\[DEPRECATED]UnknownEntityBehaviour1.cs" />
@@ -161,6 +164,7 @@
     <Compile Include="Assets\Scripts\UI\LevelChanger.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
+    <Compile Include="Assets\StartConsole.cs" />
     <None Include="Assets\Aura\Shaders\Shaders\Particles\AuraParticlesBlendAdd.shader" />
     <None Include="Assets\Aura\Shaders\ComputeShaders\Includes\PointLightInjection.cginc" />
     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
