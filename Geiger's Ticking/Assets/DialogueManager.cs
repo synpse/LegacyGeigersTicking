@@ -46,6 +46,11 @@ public class DialogueManager : MonoBehaviour {
         StartCoroutine(TypeSentence(sentence));
     }
 
+    public void ForceEnd()
+    {
+        EndDialogue();
+    }
+
     IEnumerator TypeSentence (string sentence)
     {
         dialogueText.text = "";
