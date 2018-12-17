@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class MainMenuController : MonoBehaviour {
 
-    [Header("Components")]
-    public Canvas consoleCanvas;
-
     void Update () {
         // If "\" is pressed and game is not paused
         if (Input.GetKeyDown(KeyCode.Backslash))
@@ -14,11 +11,12 @@ public class MainMenuController : MonoBehaviour {
             // On keypress turn on or off depending on context
             // activeInHierarchy returns a bool with active or not active
             // If ON => OFF, if OFF => ON
-            consoleCanvas.gameObject.SetActive(!consoleCanvas.gameObject.activeInHierarchy);
+            DeveloperConsole.Instance.consoleCanvas.gameObject.SetActive
+            (!DeveloperConsole.Instance.consoleCanvas.gameObject.activeInHierarchy);
         }
 
         // If active
-        if (consoleCanvas.gameObject.activeInHierarchy)
+        if (DeveloperConsole.Instance.consoleCanvas.gameObject.activeInHierarchy)
         {
             Time.timeScale = 0f;
         }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DisplayFPS : MonoBehaviour
+public class DisplayFPS : Singleton<DisplayFPS>
 {
     [Header("Components")]
     public static GUIStyle style = new GUIStyle();

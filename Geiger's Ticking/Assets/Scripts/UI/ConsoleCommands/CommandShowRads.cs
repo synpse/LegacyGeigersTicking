@@ -3,33 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Console
+public class ShowRads : ConsoleCommand
 {
-    public class ShowRads : ConsoleCommand
+    // Overrides
+    public override string Name { get; protected set; }
+
+    public override string Command { get; protected set; }
+
+    // Noclip command
+    public ShowRads()
     {
-        // Overrides
-        public override string Name { get; protected set; }
+        Name = "showRads";
+        Command = "showRads";
 
-        public override string Command { get; protected set; }
+        AddCommandToConsole();
+    }
 
-        // Noclip command
-        public ShowRads()
-        {
-            Name = "showRads";
-            Command = "showRads";
+    public override void RunCommand()
+    {
+        Debug.Log("Rads Accumulated: " + ActivateRadEffect.radsAccumulated);
+    }
 
-            AddCommandToConsole();
-        }
-
-        public override void RunCommand()
-        {
-            Debug.Log("Rads Accumulated: " + ActivateRadEffect.radsAccumulated);
-        }
-
-        public static ShowRads CreateCommand()
-        {
-            // Returns command
-            return new ShowRads();
-        }
+    public static ShowRads CreateCommand()
+    {
+        // Returns command
+        return new ShowRads();
     }
 }

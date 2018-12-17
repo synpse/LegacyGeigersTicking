@@ -3,34 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Console
+public class CommandMainMenu : ConsoleCommand
 {
-    public class CommandMainMenu : ConsoleCommand
+    // Overrides
+    public override string Name { get; protected set; }
+
+    public override string Command { get; protected set; }
+
+    // Noclip command
+    public CommandMainMenu()
     {
-        // Overrides
-        public override string Name { get; protected set; }
+        Name = "mainMenu";
+        Command = "mainMenu";
 
-        public override string Command { get; protected set; }
+        AddCommandToConsole();
+    }
 
-        // Noclip command
-        public CommandMainMenu()
-        {
-            Name = "mainMenu";
-            Command = "mainMenu";
+    public override void RunCommand()
+    {
+        LevelChanger.Instance.FadeToLevel(0);
+        Debug.Log("Loading MainMenu... ");
+    }
 
-            AddCommandToConsole();
-        }
-
-        public override void RunCommand()
-        {
-            LevelChanger.Instance.FadeToLevel(0);
-            Debug.Log("Loading MainMenu... ");
-        }
-
-        public static CommandMainMenu CreateCommand()
-        {
-            // Returns command
-            return new CommandMainMenu();
-        }
+    public static CommandMainMenu CreateCommand()
+    {
+        // Returns command
+        return new CommandMainMenu();
     }
 }

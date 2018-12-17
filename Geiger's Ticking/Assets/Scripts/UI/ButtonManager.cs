@@ -8,20 +8,20 @@ public class ButtonManager : MonoBehaviour {
     {
         // Create New Game
         Debug.Log("Requesting new game...");
-        Console.DeveloperConsole.Commands["newGame"].RunCommand();
+        DeveloperConsole.Commands["newGame"].RunCommand();
     }
 
     public void Quit()
     {
         // Quit through console
         Debug.Log("Sending quit signal to console...");
-        Console.DeveloperConsole.Commands["quit"].RunCommand();
+        DeveloperConsole.Commands["quit"].RunCommand();
     }
 
     public void MainMenu()
     {
         // Create New Game
         Debug.Log("Returning to main menu...");
-        Console.DeveloperConsole.Commands["mainMenu"].RunCommand();
+        DeveloperConsole.Commands["mainMenu"].RunCommand();
     }
 }

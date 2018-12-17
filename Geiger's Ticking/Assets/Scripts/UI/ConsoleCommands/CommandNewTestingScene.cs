@@ -3,34 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Console
+public class CommandNewTestingScene : ConsoleCommand
 {
-    public class CommandNewTestingScene : ConsoleCommand
+    // Overrides
+    public override string Name { get; protected set; }
+
+    public override string Command { get; protected set; }
+
+    // Noclip command
+    public CommandNewTestingScene()
     {
-        // Overrides
-        public override string Name { get; protected set; }
+        Name = "newTestingScene";
+        Command = "newTestingScene";
 
-        public override string Command { get; protected set; }
+        AddCommandToConsole();
+    }
 
-        // Noclip command
-        public CommandNewTestingScene()
-        {
-            Name = "newTestingScene";
-            Command = "newTestingScene";
+    public override void RunCommand()
+    {
+        LevelChanger.Instance.FadeToLevel(2);
+        Debug.Log("Loading TestingScene... ");
+    }
 
-            AddCommandToConsole();
-        }
-
-        public override void RunCommand()
-        {
-            LevelChanger.Instance.FadeToLevel(2);
-            Debug.Log("Loading TestingScene... ");
-        }
-
-        public static CommandNewTestingScene CreateCommand()
-        {
-            // Returns command
-            return new CommandNewTestingScene();
-        }
+    public static CommandNewTestingScene CreateCommand()
+    {
+        // Returns command
+        return new CommandNewTestingScene();
     }
 }

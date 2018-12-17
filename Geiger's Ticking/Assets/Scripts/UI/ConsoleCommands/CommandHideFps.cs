@@ -3,33 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Console
+public class HideFps : ConsoleCommand
 {
-    public class HideFps : ConsoleCommand
+    // Overrides
+    public override string Name { get; protected set; }
+
+    public override string Command { get; protected set; }
+
+    // Noclip command
+    public HideFps()
     {
-        // Overrides
-        public override string Name { get; protected set; }
+        Name = "hideFps";
+        Command = "hideFps";
 
-        public override string Command { get; protected set; }
+        AddCommandToConsole();
+    }
 
-        // Noclip command
-        public HideFps()
-        {
-            Name = "hideFps";
-            Command = "hideFps";
+    public override void RunCommand()
+    {
+        DisplayFPS.style.normal.textColor = new Color(255f, 255f, 255f, 0.0f);
+    }
 
-            AddCommandToConsole();
-        }
-
-        public override void RunCommand()
-        {
-            DisplayFPS.style.normal.textColor = new Color(255f, 255f, 255f, 0.0f);
-        }
-
-        public static HideFps CreateCommand()
-        {
-            // Returns command
-            return new HideFps();
-        }
+    public static HideFps CreateCommand()
+    {
+        // Returns command
+        return new HideFps();
     }
 }

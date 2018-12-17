@@ -2,41 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Console
+public class CommandNoClip : ConsoleCommand
 {
-    public class CommandNoClip : ConsoleCommand
+    // Header for the sake of organization
+    [Header("Player Components")]
+    public Rigidbody player;
+
+    // Overrides
+    public override string Name { get; protected set; }
+
+    public override string Command { get; protected set; }
+
+    // Noclip command
+    public CommandNoClip()
     {
-        // Header for the sake of organization
-        [Header("Player Components")]
-        public Rigidbody player;
+        Name = "noClip";
+        Command = "noClip";
 
-        // Overrides
-        public override string Name { get; protected set; }
+        AddCommandToConsole();
+    }
 
-        public override string Command { get; protected set; }
+    public override void RunCommand()
+    {
+        player = GameObject.FindWithTag("Player").GetComponent<Rigidbody>();
+        player.useGravity = false;
+        player.detectCollisions = false;
+        player.isKinematic = true;
+        Debug.Log("Gravity and collision detection are now disabled. ");
+    }
 
-        // Noclip command
-        public CommandNoClip()
-        {
-            Name = "noClip";
-            Command = "noClip";
-
-            AddCommandToConsole();
-        }
-
-        public override void RunCommand()
-        {
-            player = GameObject.FindWithTag("Player").GetComponent<Rigidbody>();
-            player.useGravity = false;
-            player.detectCollisions = false;
-            player.isKinematic = true;
-            Debug.Log("Gravity and collision detection are now disabled. ");
-        }
-
-        public static CommandNoClip CreateCommand()
-        {
-            // Returns command
-            return new CommandNoClip();
-        }
+    public static CommandNoClip CreateCommand()
+    {
+        // Returns command
+        return new CommandNoClip();
     }
 }
