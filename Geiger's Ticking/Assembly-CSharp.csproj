@@ -128,9 +128,9 @@
     <Compile Include="Assets\Scripts\Behaviours\[DEPRECATED]UnknownEntityBehaviour1.cs" />
     <Compile Include="Assets\Scripts\Behaviours\ElevatorDoorsOpen.cs" />
     <Compile Include="Assets\Scripts\Behaviours\EndLevel0.cs" />
+    <Compile Include="Assets\Scripts\Behaviours\OnDoorOpen.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactible.cs" />
     <Compile Include="Assets\Scripts\Interaction\Player.cs" />
-    <Compile Include="Assets\Scripts\LevelChanger.cs" />
     <Compile Include="Assets\Scripts\Lights\ForceVolumetricLighting.cs" />
     <Compile Include="Assets\Scripts\Movement(Imported)\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Movement(Imported)\RigidbodyFirstPersonController.cs" />
@@ -156,6 +156,7 @@
     <Compile Include="Assets\Scripts\UI\ConsoleCommands\CommandShowRads.cs" />
     <Compile Include="Assets\Scripts\UI\DeveloperConsole\DeveloperConsole.cs" />
     <Compile Include="Assets\Scripts\UI\DisplayFPS.cs" />
+    <Compile Include="Assets\Scripts\UI\LevelChanger.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
     <None Include="Assets\Aura\Shaders\Shaders\Particles\AuraParticlesBlendAdd.shader" />
