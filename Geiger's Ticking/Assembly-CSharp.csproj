@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\3D Models\OldRadio\Alpinist\CamRotat.cs" />
     <Compile Include="Assets\Aura\Attributes\ColorCircularPickerAttribute.cs" />
     <Compile Include="Assets\Aura\Attributes\Texture3DPreviewAttribute.cs" />
     <Compile Include="Assets\Aura\Classes\Aura.cs" />
@@ -127,7 +128,6 @@
     <Compile Include="Assets\Dialogue.cs" />
     <Compile Include="Assets\DialogueManager.cs" />
     <Compile Include="Assets\DialogueTrigger.cs" />
-    <Compile Include="Assets\OldRadio\Alpinist\CamRotat.cs" />
     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\Scripts\Behaviours\[DEPRECATED]UnknownEntityBehaviour1.cs" />
     <Compile Include="Assets\Scripts\Behaviours\ElevatorDoorsOpen.cs" />
@@ -139,11 +139,11 @@
     <Compile Include="Assets\Scripts\Lights\ForceVolumetricLighting.cs" />
     <Compile Include="Assets\Scripts\Movement(Imported)\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Movement(Imported)\RigidbodyFirstPersonController.cs" />
+    <Compile Include="Assets\Scripts\PremadeScripts\HeadBob.cs" />
+    <Compile Include="Assets\Scripts\PremadeScripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\PremadeScripts\RigidbodyFirstPersonController.cs" />
     <Compile Include="Assets\Scripts\Puzzles\Puzzle.cs" />
     <Compile Include="Assets\Scripts\Radiation\ActivateRadEffect.cs" />
-    <Compile Include="Assets\Scripts\Scripts\HeadBob.cs" />
-    <Compile Include="Assets\Scripts\Scripts\MouseLook.cs" />
-    <Compile Include="Assets\Scripts\Scripts\RigidbodyFirstPersonController.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\Textures\RecalculateTexture.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonManager.cs" />
@@ -170,7 +170,7 @@
     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
     <None Include="Assets\Aura\License\license.txt" />
     <None Include="Assets\Aura\Shaders\Shaders\StorePointLightCookieMap.shader" />
-    <None Include="Assets\OldRadio\Alpinist\ReadMe.txt" />
+    <None Include="Assets\3D Models\OldRadio\Alpinist\ReadMe.txt" />
     <None Include="Assets\Aura\Shaders\Shaders\StoreShadowDataShader.shader" />
     <None Include="Assets\Aura\Shaders\Shaders\StoreDirectionalSpotLightCookieMap.shader" />
     <None Include="Assets\Aura\Shaders\Includes\CommonVariables.cginc" />
@@ -202,6 +202,9 @@
     <None Include="Assets\Aura\Shaders\ComputeShaders\Includes\SpotLightInjection.cginc" />
     <None Include="Assets\Aura\Shaders\Includes\AuraParticlesBase.cginc" />
     <None Include="Assets\Aura\Shaders\Includes\Common.cginc" />
+    <Reference Include="Cinemachine">
+      <HintPath>D:/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -210,6 +213,9 @@
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>D:/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>D:/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

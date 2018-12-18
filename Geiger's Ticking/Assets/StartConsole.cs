@@ -5,52 +5,65 @@ using UnityEngine;
 public class StartConsole : MonoBehaviour {
 
     public GameObject _consoleScreen;
-
     public GameObject _console;
+    public GameObject _player;
+    public Animator _animator;
+    public Camera _camera1;
+    public Camera _camera2;
 
     private Interactible console;
 
-    public GameObject _player;
-
-    private bool ended;
+    private bool active;
 
     void Start ()
     {
         console = _console.gameObject.GetComponent<Interactible>();
         _consoleScreen.SetActive(false);
+        _camera1.enabled = true;
+        _camera2.enabled = false;
     }
 	
 	void Update ()
     {
-        if (!ended)
+        if (console.interactiveOn)
         {
-            Check();
+            StartCoroutine(ToggleScreen());
+            _camera1.enabled = false;
+            _camera2.enabled = true;
+            _animator.SetTrigger("Zoom");
+            console.interactiveOn = false;
         }
 
         // If console is active
-        if (_consoleScreen.gameObject.activeInHierarchy)
+        if (_consoleScreen.gameObject.activeInHierarchy == true && active == true)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             _player.GetComponent<RigidbodyFirstPersonController>().enabled = false;
         }
-        else
+        if (_consoleScreen.gameObject.activeInHierarchy == false && active == true)
         {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             _player.GetComponent<RigidbodyFirstPersonController>().enabled = true;
-            ended = false;
-            console.interactiveOn = false;
+            _animator.SetTrigger("Zoom");
+            StartCoroutine(CloseScreen());
+            active = false;
         }
     }
 
-    private void Check()
+    IEnumerator ToggleScreen()
     {
-        if (console.interactiveOn == true)
-        {
-            _consoleScreen.SetActive(true);
-            FindObjectOfType<DialogueTrigger>().TriggerDialogue();
-            ended = true;
-        }
+        yield return new WaitForSeconds(0.75f);
+        _consoleScreen.SetActive(true);
+        active = true;
+        FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+    }
+
+    IEnumerator CloseScreen()
+    {
+        yield return new WaitForSeconds(1f);
+        _camera1.enabled = true;
+        _camera2.enabled = false;
     }
 }
