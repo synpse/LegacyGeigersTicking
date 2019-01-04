@@ -76,22 +76,22 @@
     <None Include="Assets\Aura\Editor\Shaders\ColorFieldDrawerShader.shader" />
     <None Include="Assets\Aura\Editor\Shaders\Texture3DPreviewShader.shader" />
     <Reference Include="Cinemachine">
-      <HintPath>D:/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+      <HintPath>C:/Users/Synpse/Desktop/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Synpse/Desktop/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Synpse/Desktop/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Synpse/Desktop/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+      <HintPath>C:/Users/Synpse/Desktop/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Synpse/Desktop/secretradiacao/Geiger's Ticking/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
