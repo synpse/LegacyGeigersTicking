@@ -171,6 +171,28 @@ public class RigidbodyFirstPersonController : MonoBehaviour
             gameObject.GetComponent<CapsuleCollider>().height = gameObject.GetComponent<CapsuleCollider>().height * 2;
         }
 
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            GameObject playerCam = GameObject.FindWithTag("CameraHolder");
+            playerCam.GetComponent<Animator>().SetBool("leanLeft", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.A))
+        {
+            GameObject playerCam = GameObject.FindWithTag("CameraHolder");
+            playerCam.GetComponent<Animator>().SetBool("leanLeft", false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            GameObject playerCam = GameObject.FindWithTag("CameraHolder");
+            playerCam.GetComponent<Animator>().SetBool("leanRight", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.D))
+        {
+            GameObject playerCam = GameObject.FindWithTag("CameraHolder");
+            playerCam.GetComponent<Animator>().SetBool("leanRight", false);
+        }
+
         // If console or pause is active
         if (developerConsole.consoleCanvas.gameObject.activeInHierarchy 
             || pauseMenuCanvas.gameObject.activeInHierarchy)
