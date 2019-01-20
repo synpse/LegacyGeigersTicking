@@ -10,6 +10,8 @@ public class CommandNewGame : ConsoleCommand
 
     public override string Command { get; protected set; }
 
+    LevelChanger levelChanger;
+
     // Noclip command
     public CommandNewGame()
     {
@@ -21,7 +23,8 @@ public class CommandNewGame : ConsoleCommand
 
     public override void RunCommand()
     {
-        LevelChanger.Instance.FadeToLevel(1);
+        levelChanger = GameObject.Find("LevelChanger").GetComponent<LevelChanger>();
+        levelChanger.FadeToLevel(3);
         Debug.Log("Loading MainScene... ");
     }
 

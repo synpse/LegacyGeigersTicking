@@ -10,6 +10,8 @@ public class CommandMainMenu : ConsoleCommand
 
     public override string Command { get; protected set; }
 
+    LevelChanger levelChanger;
+
     // Noclip command
     public CommandMainMenu()
     {
@@ -21,7 +23,8 @@ public class CommandMainMenu : ConsoleCommand
 
     public override void RunCommand()
     {
-        LevelChanger.Instance.FadeToLevel(0);
+        levelChanger = GameObject.Find("LevelChanger").GetComponent<LevelChanger>();
+        levelChanger.FadeToLevel(1);
         Debug.Log("Loading MainMenu... ");
     }
 

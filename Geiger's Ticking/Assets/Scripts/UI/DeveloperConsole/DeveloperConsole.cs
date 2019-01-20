@@ -19,7 +19,7 @@ public abstract class ConsoleCommand
     public abstract void RunCommand();
 }
 
-public class DeveloperConsole : Singleton<DeveloperConsole>
+public class DeveloperConsole : MonoBehaviour
 {
     // Dictionary
     public static Dictionary<string, ConsoleCommand> Commands { get; set; }

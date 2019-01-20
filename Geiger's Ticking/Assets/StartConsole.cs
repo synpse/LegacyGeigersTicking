@@ -30,7 +30,7 @@ public class StartConsole : MonoBehaviour {
             StartCoroutine(ToggleScreen());
             _camera1.enabled = false;
             _camera2.enabled = true;
-            _animator.SetTrigger("Zoom");
+            _animator.SetBool("Zoom", true);
             console.interactiveOn = false;
         }
 
@@ -46,7 +46,7 @@ public class StartConsole : MonoBehaviour {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             _player.GetComponent<RigidbodyFirstPersonController>().enabled = true;
-            _animator.SetTrigger("Zoom");
+            _animator.SetBool("Zoom", false);
             StartCoroutine(CloseScreen());
             active = false;
         }

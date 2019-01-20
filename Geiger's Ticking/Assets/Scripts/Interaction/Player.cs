@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        _canvasManager = CanvasManager.instance;
+        _canvasManager = GameObject.Find("ActionCanvas").GetComponent<CanvasManager>();
 
         _camera = GetComponentInChildren<Camera>();
 

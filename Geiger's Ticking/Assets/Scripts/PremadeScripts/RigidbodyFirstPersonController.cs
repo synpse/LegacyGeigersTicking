@@ -1,11 +1,6 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class RigidbodyFirstPersonController : MonoBehaviour
 {
@@ -93,6 +88,7 @@ public class RigidbodyFirstPersonController : MonoBehaviour
     private bool crouching;
     private bool keydown;
 
+    DeveloperConsole developerConsole;
 
     public Vector3 Velocity
     {
@@ -123,6 +119,7 @@ public class RigidbodyFirstPersonController : MonoBehaviour
 
     private void Start()
     {
+        developerConsole = GameObject.Find("DeveloperConsole").GetComponent<DeveloperConsole>();
         m_RigidBody = GetComponent<Rigidbody>();
         m_Capsule = GetComponent<CapsuleCollider>();
         mouseLook.Init(transform, cam.transform);
@@ -149,13 +146,13 @@ public class RigidbodyFirstPersonController : MonoBehaviour
             // On keypress turn on or off depending on context
             // activeInHierarchy returns a bool with active or not active
             // If ON => OFF, if OFF => ON
-            DeveloperConsole.Instance.consoleCanvas.gameObject.SetActive
-            (!DeveloperConsole.Instance.consoleCanvas.gameObject.activeInHierarchy);
+            developerConsole.consoleCanvas.gameObject.SetActive
+            (!developerConsole.consoleCanvas.gameObject.activeInHierarchy);
         }
 
         // If "F" is pressed
         if (Input.GetKeyDown(KeyCode.F) && !pauseMenuCanvas.gameObject.activeInHierarchy
-            && !DeveloperConsole.Instance.consoleCanvas.gameObject.activeInHierarchy)
+            && !developerConsole.consoleCanvas.gameObject.activeInHierarchy)
         {
             // On keypress turn on or off depending on context
             // activeInHierarchy returns a bool with active or not active
@@ -175,7 +172,7 @@ public class RigidbodyFirstPersonController : MonoBehaviour
         }
 
         // If console or pause is active
-        if (DeveloperConsole.Instance.consoleCanvas.gameObject.activeInHierarchy 
+        if (developerConsole.consoleCanvas.gameObject.activeInHierarchy 
             || pauseMenuCanvas.gameObject.activeInHierarchy)
         {
             Time.timeScale = 0f;
