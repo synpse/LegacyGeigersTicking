@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EndHere : MonoBehaviour
 {
+    ShowScore showScore;
     LevelChanger levelChanger;
 
     private void Start()
@@ -23,6 +24,6 @@ public class EndHere : MonoBehaviour
     IEnumerator Load()
     {
         yield return new WaitForSeconds(3);
-        levelChanger.FadeToLevel(0);
+        levelChanger.FadeToLevel(5);
     }
 }

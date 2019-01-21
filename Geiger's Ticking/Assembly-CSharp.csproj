@@ -124,9 +124,6 @@
     <Compile Include="Assets\Aura\Structs\VolumeInjectionShape.cs" />
     <Compile Include="Assets\Aura\Structs\VolumeLevelsData.cs" />
     <Compile Include="Assets\Aura\Structs\VolumeTextureData.cs" />
-    <Compile Include="Assets\Dialogue.cs" />
-    <Compile Include="Assets\DialogueManager.cs" />
-    <Compile Include="Assets\DialogueTrigger.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -135,12 +132,17 @@
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Jumpscare.cs" />
     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\Scripts\Behaviours\[DEPRECATED]UnknownEntityBehaviour1.cs" />
+    <Compile Include="Assets\Scripts\Behaviours\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\Behaviours\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\Behaviours\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\Behaviours\ElevatorDoorsOpen.cs" />
     <Compile Include="Assets\Scripts\Behaviours\EndHere.cs" />
     <Compile Include="Assets\Scripts\Behaviours\EndLevel0.cs" />
     <Compile Include="Assets\Scripts\Behaviours\OnDoorOpen.cs" />
+    <Compile Include="Assets\Scripts\Behaviours\StartConsole.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactible.cs" />
     <Compile Include="Assets\Scripts\Interaction\Player.cs" />
     <Compile Include="Assets\Scripts\Lights\ForceVolumetricLighting.cs" />
@@ -151,6 +153,8 @@
     <Compile Include="Assets\Scripts\PremadeScripts\RigidbodyFirstPersonController.cs" />
     <Compile Include="Assets\Scripts\Puzzles\Puzzle.cs" />
     <Compile Include="Assets\Scripts\Radiation\ActivateRadEffect.cs" />
+    <Compile Include="Assets\Scripts\SaveLoad\FileManager.cs" />
+    <Compile Include="Assets\Scripts\SaveLoad\SaveGame.cs" />
     <Compile Include="Assets\Scripts\Textures\RecalculateTexture.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\UI\CanvasManager.cs" />
@@ -170,8 +174,8 @@
     <Compile Include="Assets\Scripts\UI\LevelChanger.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
-    <Compile Include="Assets\StartConsole.cs" />
-    <Compile Include="Assets\StartGame.cs" />
+    <Compile Include="Assets\Scripts\UI\ShowScore.cs" />
+    <Compile Include="Assets\Scripts\UI\StartGame.cs" />
     <None Include="Assets\Aura\Shaders\Shaders\Particles\AuraParticlesBlendAdd.shader" />
     <None Include="Assets\Aura\Shaders\ComputeShaders\Includes\PointLightInjection.cginc" />
     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
