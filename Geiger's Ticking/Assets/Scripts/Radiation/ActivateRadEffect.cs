@@ -16,7 +16,7 @@ public class ActivateRadEffect : MonoBehaviour {
     [SerializeField] private AudioClip _radHigh;
     [SerializeField] private AudioClip _radExtr;
 
-    [HideInInspector] public static float radsAccumulated;
+    [HideInInspector] public static float radsAccumulated = 1;
 
     private float radIntensity;
     private float radZoneRadius;
@@ -48,9 +48,6 @@ public class ActivateRadEffect : MonoBehaviour {
     private void Start()
     {
         player = _player.GetComponent<RigidbodyFirstPersonController>();
-
-        // Start at one to prevent bug on game end
-        radsAccumulated = 1;
     }
 
     private void OnTriggerStay(Collider col)
