@@ -48,6 +48,9 @@ public class ActivateRadEffect : MonoBehaviour {
     private void Start()
     {
         player = _player.GetComponent<RigidbodyFirstPersonController>();
+
+        // Start at one to prevent bug on game end
+        radsAccumulated = 1;
     }
 
     private void OnTriggerStay(Collider col)
