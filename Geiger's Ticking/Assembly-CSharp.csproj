@@ -155,7 +155,6 @@
     <Compile Include="Assets\Scripts\Radiation\ActivateRadEffect.cs" />
     <Compile Include="Assets\Scripts\SaveLoad\FileManager.cs" />
     <Compile Include="Assets\Scripts\SaveLoad\SaveGame.cs" />
-    <Compile Include="Assets\Scripts\Textures\RecalculateTexture.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\UI\CanvasManager.cs" />
     <Compile Include="Assets\Scripts\UI\ConsoleCommands\CommandClear.cs" />
